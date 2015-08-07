@@ -18,9 +18,16 @@ return [
     'menus'        => [
         '标签管理'  => [
             'active_uri'      => 'roles',
-            'icon'            => null,
+            'icon'            => 'mdi-action-tab',
             'permission_name' => 'admin.roles.index',
             'route_name'      => 'admin.tags.index',
+            'is_redirect'     => true,
+        ],
+        '分类管理'  => [
+            'active_uri'      => 'roles',
+            'icon'            => 'mdi-action-subject',
+            'permission_name' => 'admin.roles.index',
+            'route_name'      => 'admin.categorys.index',
             'is_redirect'     => true,
         ],
         '权限' => [
@@ -66,5 +73,9 @@ return [
         'admin.tags.create'         => '新建标签',
         'admin.tags.edit'           => '编辑标签',
         'admin.tags.show'           => '查看标签',
+        'admin.categorys.index'          => '标签管理',
+        'admin.categorys.create'         => '新建标签',
+        'admin.categorys.edit'           => '编辑标签',
+        'admin.categorys.show'           => '查看标签',
     ],
 ];
