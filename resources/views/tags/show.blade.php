@@ -1,6 +1,6 @@
 @extends('forone::layouts.master')
 
-@section('title', '查看标签详情')
+@section('title', '查看'.$page_name)
 
 @section('main')
 

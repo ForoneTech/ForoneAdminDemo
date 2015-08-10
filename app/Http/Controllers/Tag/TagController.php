@@ -69,7 +69,7 @@ class TagController extends BaseController
     {
         $data=$request->only('name');
         Tag::create($data);
-        return redirect()->route('admin.tags.index');
+        return redirect()->route('admin.'.URI.'.index');
     }
 
     /**
@@ -115,7 +115,7 @@ class TagController extends BaseController
     {
         $data = $request->only(['name']);
         Tag::findOrFail($id)->update($data);
-        return redirect()->route('admin.tags.index');
+        return redirect()->route('admin.'.URI.'.index');
     }
 
     /**
