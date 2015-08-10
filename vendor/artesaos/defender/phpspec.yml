@@ -1,4 +1,0 @@
-suites:
-    defender_suite:
-        namespace: Artesaos\Defender
-        psr4_prefix: Artesaos
