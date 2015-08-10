@@ -17,5 +17,5 @@ Route::get('/', function () {
 
 Route::group(['prefix'=>'admin'],function(){
     Route::resource('tags','Tag\TagController');
-    Route::resource('categorys','Category\CategoryController');
+    Route::resource('categories','Category\CategoryController');
 });

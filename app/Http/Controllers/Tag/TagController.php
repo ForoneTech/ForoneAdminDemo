@@ -8,7 +8,6 @@ use App\Tag;
 use Forone\Admin\Controllers\BaseController;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-//use Illuminate\Support\Facades\Request;
 
 class TagController extends BaseController
 {

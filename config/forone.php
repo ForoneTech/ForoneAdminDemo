@@ -27,7 +27,7 @@ return [
             'active_uri'      => 'roles',
             'icon'            => 'mdi-action-subject',
             'permission_name' => 'admin.roles.index',
-            'route_name'      => 'admin.categorys.index',
+            'route_name'      => 'admin.categories.index',
             'is_redirect'     => true,
         ],
         '权限' => [
@@ -73,9 +73,9 @@ return [
         'admin.tags.create'         => '新建标签',
         'admin.tags.edit'           => '编辑标签',
         'admin.tags.show'           => '查看标签',
-        'admin.categorys.index'          => '标签管理',
-        'admin.categorys.create'         => '新建标签',
-        'admin.categorys.edit'           => '编辑标签',
-        'admin.categorys.show'           => '查看标签',
+        'admin.categories.index'          => '标签管理',
+        'admin.categories.create'         => '新建标签',
+        'admin.categories.edit'           => '编辑标签',
+        'admin.categories.show'           => '查看标签',
     ],
 ];

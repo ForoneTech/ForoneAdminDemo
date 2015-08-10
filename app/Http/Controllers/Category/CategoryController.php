@@ -2,15 +2,19 @@
 
 namespace App\Http\Controllers\Category;
 
+use App\Category;
+use App\Http\Requests\CreateCategoryRequest;
+use App\Http\Requests\UpdateCategoryRequest;
+use Forone\Admin\Controllers\BaseController;
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 
-class CategoryController extends Controller
+class CategoryController extends BaseController
 {
-    const URI = 'categorys';
+    const URI = 'categories';
     const NAME = '分类';
+
+
 
     function __construct()
     {
@@ -25,7 +29,24 @@ class CategoryController extends Controller
      */
     public function index()
     {
-
+        $results = [
+            'columns' => [
+                ['编号', 'id'],
+                ['分类名', 'name'],
+                ['创建时间', 'created_at'],
+                ['更新时间', 'updated_at'],
+                ['操作', 'buttons', function ($data) {
+                    $buttons = [
+                        ['查看'],
+                        ['编辑'],
+                    ];
+                    return $buttons;
+                }]
+            ]
+        ];
+        $paginate = Category::paginate();
+        $results['items'] = $paginate;
+        return $this->view(self::URI.'.index',compact('results'));
     }
 
     /**
@@ -35,7 +56,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return $this->view(self::URI.'.create');
     }
 
     /**
@@ -44,9 +65,11 @@ class CategoryController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store(Request $request)
+    public function store(CreateCategoryRequest $request)
     {
-        //
+        $data=$request->only('name');
+        Category::create($data);
+        return redirect()->route('admin.'.self::URI.'.index');
     }
 
     /**
@@ -57,7 +80,12 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Category::findOrFail($id);
+        if ($data) {
+            return view(self::URI."/show", compact('data'));
+        }else{
+            return $this->redirectWithError('数据未找到');
+        }
     }
 
     /**
@@ -68,7 +96,12 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Category::find($id);
+        if ($data) {
+            return view(self::URI."/edit", compact('data'));
+        } else {
+            return $this->redirectWithError('数据未找到');
+        }
     }
 
     /**
@@ -78,9 +111,11 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateCategoryRequest $request, $id)
     {
-        //
+        $data = $request->only(['name']);
+        Category::findOrFail($id)->update($data);
+        return redirect()->route('admin.'.self::URI.'.index');
     }
 
     /**
@@ -91,6 +126,6 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+
     }
 }
