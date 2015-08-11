@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2000eed6e42e19445f94e02516d423f2",
+    "hash": "af01af9840a2f53ad61ab33e9c92415d",
     "packages": [
         {
             "name": "artesaos/defender",
@@ -680,13 +680,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ForoneTech/ForoneAdmin.git",
-                "reference": "ca71115ea8512c5936b23f470361798e10b26ec9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ForoneTech/ForoneAdmin/zipball/ca71115ea8512c5936b23f470361798e10b26ec9",
-                "reference": "ca71115ea8512c5936b23f470361798e10b26ec9",
-                "shasum": ""
+                "reference": "e76cf41b375166578008e29203b69a005ec50918"
             },
             "require": {
                 "artesaos/defender": "0.3.1",
@@ -702,10 +696,9 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Forone\\Admin\\": "src"
+                    "Forone\\Admin\\": "src/Forone/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "authors": [
                 {
                     "name": "YuGang Yang",
@@ -719,7 +712,7 @@
                 "forone",
                 "laravel 5"
             ],
-            "time": "2015-08-05 06:12:12"
+            "time": "2015-08-11 03:12:48"
         },
         {
             "name": "illuminate/html",
@@ -1123,16 +1116,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.15.0",
+            "version": "1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "dc5150cc608f2334c72c3b6a553ec9668a4156b0"
+                "reference": "c0c0b4bee3aabce7182876b0d912ef2595563db7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/dc5150cc608f2334c72c3b6a553ec9668a4156b0",
-                "reference": "dc5150cc608f2334c72c3b6a553ec9668a4156b0",
+                "url": "http://packagist.phpcomposer.com/files/Seldaek/monolog/c0c0b4bee3aabce7182876b0d912ef2595563db7.zip",
+                "reference": "c0c0b4bee3aabce7182876b0d912ef2595563db7",
                 "shasum": ""
             },
             "require": {
@@ -1169,7 +1162,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.15.x-dev"
+                    "dev-master": "1.16.x-dev"
                 }
             },
             "autoload": {
@@ -1195,7 +1188,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-07-12 13:54:09"
+            "time": "2015-08-09 17:44:44"
         },
         {
             "name": "mtdowling/cron-expression",
@@ -2975,16 +2968,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.0",
+            "version": "4.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "283111a903eb9225aedb95e846bef876e006a688"
+                "reference": "fd3050e26e3105f416d74c4d33aea659b406c59d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/283111a903eb9225aedb95e846bef876e006a688",
-                "reference": "283111a903eb9225aedb95e846bef876e006a688",
+                "url": "http://packagist.phpcomposer.com/files/sebastianbergmann/phpunit/fd3050e26e3105f416d74c4d33aea659b406c59d.zip",
+                "reference": "fd3050e26e3105f416d74c4d33aea659b406c59d",
                 "shasum": ""
             },
             "require": {
@@ -3043,7 +3036,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-08-07 03:57:43"
+            "time": "2015-08-10 09:16:56"
         },
         {
             "name": "phpunit/phpunit-mock-objects",

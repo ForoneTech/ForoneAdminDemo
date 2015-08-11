@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\Tag;
+namespace App\Http\Controllers\Artical;
 
-use App\Http\Requests\CreateTagRequest;
-use App\Http\Requests\UpdateTagRequest;
-use App\Tag;
+use App\Artical;
+use App\Http\Requests\CreateArticalRequest;
+use App\Http\Requests\UpdateArticalRequest;
 use Forone\Admin\Controllers\BaseController;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 
-class TagController extends BaseController
+class ArticalController extends BaseController
 {
-    const URI = 'tags';
-    const NAME = '标签';
+    const URI = 'articals';
+    const NAME = '文章';
 
 
     function __construct()
@@ -31,7 +31,7 @@ class TagController extends BaseController
         $results = [
             'columns' => [
                 ['编号', 'id'],
-                ['标签名', 'name'],
+                ['文章名', 'name'],
                 ['创建时间', 'created_at'],
                 ['更新时间', 'updated_at'],
                 ['操作', 'buttons', function ($data) {
@@ -43,7 +43,7 @@ class TagController extends BaseController
                 }]
             ]
         ];
-        $paginate = Tag::paginate();
+        $paginate = Artical::paginate();
         $results['items'] = $paginate;
         return $this->view(self::URI.'.index',compact('results'));
     }
@@ -64,10 +64,10 @@ class TagController extends BaseController
      * @param  Request  $request
      * @return Response
      */
-    public function store(CreateTagRequest $request)
+    public function store(CreateArticalRequest $request)
     {
         $data=$request->only('name');
-        Tag::create($data);
+        Artical::create($data);
         return redirect()->route('admin.'.URI.'.index');
     }
 
@@ -79,7 +79,7 @@ class TagController extends BaseController
      */
     public function show($id)
     {
-        $data = Tag::findOrFail($id);
+        $data = Arical::findOrFail($id);
         if ($data) {
             return view(self::URI."/show", compact('data'));
         }else{
@@ -95,7 +95,7 @@ class TagController extends BaseController
      */
     public function edit($id)
     {
-        $data = Tag::find($id);
+        $data = Artical::find($id);
         if ($data) {
             return view(self::URI."/edit", compact('data'));
         } else {
@@ -110,10 +110,10 @@ class TagController extends BaseController
      * @param  int  $id
      * @return Response
      */
-    public function update(UpdateTagRequest $request, $id)
+    public function update(UpdateArticalRequest $request, $id)
     {
         $data = $request->only(['name']);
-        Tag::findOrFail($id)->update($data);
+        Artical::findOrFail($id)->update($data);
         return redirect()->route('admin.'.URI.'.index');
     }
 
@@ -125,6 +125,6 @@ class TagController extends BaseController
      */
     public function destroy($id)
     {
-
+        //
     }
 }

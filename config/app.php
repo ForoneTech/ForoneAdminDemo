@@ -145,7 +145,6 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         Forone\Admin\Providers\ForoneServiceProvider::class,
-        Orangehill\Iseed\IseedServiceProvider::class,
 
     ],
 

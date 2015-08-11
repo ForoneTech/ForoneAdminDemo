@@ -16,15 +16,24 @@ return [
     'RedirectIfAuthenticatedPath' => 'admin/roles', // 如果授权后直接跳转到指定页面
 
     'menus'        => [
+        '文章管理'  => [
+            'active_uri'      => 'articals',
+            'icon'            => 'mdi-action-tab',
+            'permission_name' => 'admin.roles.index',
+            'route_name'      => 'admin.articals.index',
+            'is_redirect'     => true,
+
+        ],
         '标签管理'  => [
-            'active_uri'      => 'roles',
+            'active_uri'      => 'tags',
             'icon'            => 'mdi-action-tab',
             'permission_name' => 'admin.roles.index',
             'route_name'      => 'admin.tags.index',
             'is_redirect'     => true,
+
         ],
         '分类管理'  => [
-            'active_uri'      => 'roles',
+            'active_uri'      => 'categories',
             'icon'            => 'mdi-action-subject',
             'permission_name' => 'admin.roles.index',
             'route_name'      => 'admin.categories.index',
@@ -77,5 +86,9 @@ return [
         'admin.categories.create'         => '新建标签',
         'admin.categories.edit'           => '编辑标签',
         'admin.categories.show'           => '查看标签',
+        'admin.articals.index'          => '标签管理',
+        'admin.articals.create'         => '新建标签',
+        'admin.articals.edit'           => '编辑标签',
+        'admin.articals.show'           => '查看标签',
     ],
 ];

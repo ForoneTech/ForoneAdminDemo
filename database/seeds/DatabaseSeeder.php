@@ -17,5 +17,18 @@ class DatabaseSeeder extends Seeder
         // $this->call(UserTableSeeder::class);
 
         Model::reguard();
-    }
+    	$this->call('AdminsTableSeeder');
+		$this->call('ArtistsTableSeeder');
+		$this->call('CategoriesTableSeeder');
+		$this->call('MigrationsTableSeeder');
+		$this->call('PasswordResetsTableSeeder');
+		$this->call('PermissionRoleTableSeeder');
+		$this->call('PermissionUserTableSeeder');
+		$this->call('PermissionsTableSeeder');
+		$this->call('RoleUserTableSeeder');
+		$this->call('RolesTableSeeder');
+		$this->call('TagsTableSeeder');
+		$this->call('UsersTableSeeder');
+		$this->call('ArticalsTableSeeder');
+	}
 }
