@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "af01af9840a2f53ad61ab33e9c92415d",
+    "hash": "6534a41f9c3d100bd082c8ac63405ba2",
     "packages": [
         {
             "name": "artesaos/defender",
@@ -680,7 +680,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ForoneTech/ForoneAdmin.git",
-                "reference": "e76cf41b375166578008e29203b69a005ec50918"
+                "reference": "21d3d7042c4358788cf740c14e99ff6d9f09d9fc"
             },
             "require": {
                 "artesaos/defender": "0.3.1",
@@ -688,10 +688,8 @@
                 "illuminate/html": "5.0.0",
                 "illuminate/routing": "5.1.*",
                 "illuminate/support": "5.1.*",
+                "orangehill/iseed": "^2.0",
                 "php": ">=5.5.9"
-            },
-            "require-dev": {
-                "orangehill/iseed": "dev-master"
             },
             "type": "library",
             "autoload": {
@@ -712,7 +710,7 @@
                 "forone",
                 "laravel 5"
             ],
-            "time": "2015-08-11 03:12:48"
+            "time": "2015-08-11 03:48:20"
         },
         {
             "name": "illuminate/html",
@@ -1124,7 +1122,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://packagist.phpcomposer.com/files/Seldaek/monolog/c0c0b4bee3aabce7182876b0d912ef2595563db7.zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/c0c0b4bee3aabce7182876b0d912ef2595563db7",
                 "reference": "c0c0b4bee3aabce7182876b0d912ef2595563db7",
                 "shasum": ""
             },
@@ -1328,20 +1326,20 @@
         },
         {
             "name": "orangehill/iseed",
-            "version": "dev-master",
+            "version": "v2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orangehill/iseed.git",
-                "reference": "0886919f3f0f7513ec334af22beeddcb3f28b7e2"
+                "reference": "02d4843f1ac4dcb7ac08a31a8bf10c527a16fba0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orangehill/iseed/zipball/0886919f3f0f7513ec334af22beeddcb3f28b7e2",
-                "reference": "0886919f3f0f7513ec334af22beeddcb3f28b7e2",
+                "url": "https://api.github.com/repos/orangehill/iseed/zipball/02d4843f1ac4dcb7ac08a31a8bf10c527a16fba0",
+                "reference": "02d4843f1ac4dcb7ac08a31a8bf10c527a16fba0",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0"
+                "php": ">=5.3.0"
             },
             "require-dev": {
                 "illuminate/filesystem": "5.x",
@@ -1373,7 +1371,7 @@
                 "laravel",
                 "seed"
             ],
-            "time": "2015-03-19 09:48:32"
+            "time": "2015-03-17 14:16:35"
         },
         {
             "name": "psr/log",
@@ -2976,7 +2974,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://packagist.phpcomposer.com/files/sebastianbergmann/phpunit/fd3050e26e3105f416d74c4d33aea659b406c59d.zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/fd3050e26e3105f416d74c4d33aea659b406c59d",
                 "reference": "fd3050e26e3105f416d74c4d33aea659b406c59d",
                 "shasum": ""
             },
@@ -3518,7 +3516,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "orangehill/iseed": 20,
         "forone/admin": 20
     },
     "prefer-stable": false,

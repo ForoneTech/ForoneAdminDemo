@@ -71,7 +71,7 @@ class MigrationsTableSeeder extends Seeder {
 			),
 			11 => 
 			array (
-				'migration' => '2015_08_10_083433_create_articals_table',
+				'migration' => '2015_08_11_053603_create_articals_table',
 				'batch' => 1,
 			),
 		));

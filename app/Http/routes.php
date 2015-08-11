@@ -19,4 +19,5 @@ Route::group(['prefix'=>'admin'],function(){
     Route::resource('tags','Tag\TagController');
     Route::resource('categories','Category\CategoryController');
     Route::resource('articals','Artical\ArticalController');
+    Route::resource('recycle','Recycle\RecycleController');
 });

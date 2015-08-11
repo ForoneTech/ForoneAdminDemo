@@ -39,6 +39,14 @@ return [
             'route_name'      => 'admin.categories.index',
             'is_redirect'     => true,
         ],
+        '回收站'  => [
+            'active_uri'      => 'recycle',
+            'icon'            => 'mdi-action-subject',
+            'permission_name' => 'admin.roles.index',
+            'route_name'      => 'admin.recycle.index',
+            'is_redirect'     => true,
+        ],
+
         '权限' => [
             'icon'            => 'mdi-toggle-radio-button-on',
             'active_uri'      => 'roles|permissions|admins|navs',

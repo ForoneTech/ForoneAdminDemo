@@ -7,7 +7,6 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
-        "orangehill/iseed": "dev-master",
         "forone/admin": "dev-master"
     },
     "require-dev": {
@@ -51,8 +50,7 @@
         "preferred-install": "dist"
     },
     "repositories": [
-      {"type": "git", "url": "https://github.com/ForoneTech/ForoneAdmin.git"},
-      {"packagist": false}
+      {"type": "git", "url": "https://github.com/ForoneTech/ForoneAdmin.git"}
     ]
 
 }

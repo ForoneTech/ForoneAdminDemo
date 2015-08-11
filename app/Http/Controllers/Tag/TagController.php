@@ -37,7 +37,8 @@ class TagController extends BaseController
                 ['操作', 'buttons', function ($data) {
                     $buttons = [
                         ['查看'],
-                        ['编辑'],
+                        ['编辑']
+
                     ];
                     return $buttons;
                 }]
@@ -68,7 +69,7 @@ class TagController extends BaseController
     {
         $data=$request->only('name');
         Tag::create($data);
-        return redirect()->route('admin.'.URI.'.index');
+        return redirect()->route('admin.'.self::URI.'.index');
     }
 
     /**
@@ -114,7 +115,7 @@ class TagController extends BaseController
     {
         $data = $request->only(['name']);
         Tag::findOrFail($id)->update($data);
-        return redirect()->route('admin.'.URI.'.index');
+        return redirect()->route('admin.'.self::URI.'.index');
     }
 
     /**

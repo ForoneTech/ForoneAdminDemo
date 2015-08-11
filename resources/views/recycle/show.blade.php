@@ -5,7 +5,7 @@
 @section('main')
 
     {!! Form::model($data,['url'=>Request::url().'/edit','class'=>'form-horizontal', 'method'=>'GET']) !!}
-    @include($uri.'.form', ['show'=>true])
+    @include($uri.'form', ['show'=>true])
     {!! Form::close() !!}
 
 @stop

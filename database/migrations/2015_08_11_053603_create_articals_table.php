@@ -15,17 +15,17 @@ class CreateArticalsTable extends Migration
         Schema::create('articals', function (Blueprint $table) {
             $table->increments('id');
             $table->string("name");
-            $table->string('artist');
             $table->text('content');
             $table->integer('tag_id')->unsigned()->nullable();
             $table->integer('category_id')->unsigned()->nullable();
+            $table->integer('artist_id')->unsigned()->nullable();
             $table->integer('admin_id')->unsigned()->nullable(); //操作人ID
-            $table->timestamps();
 
             $table->foreign('tag_id')->references('id')->on('tags');
-            $table->foreign('category_id')->references('id')->on('tags');
-//            $table->foreign('artist_id')->references('id')->on('artists');
+            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('artist_id')->references('id')->on('artists');
             $table->foreign('admin_id')->references('id')->on('admins');
+            $table->timestamps();
         });
     }
 
@@ -36,6 +36,6 @@ class CreateArticalsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('articals');
     }
 }
