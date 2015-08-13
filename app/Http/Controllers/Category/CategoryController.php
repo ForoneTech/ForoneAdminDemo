@@ -8,6 +8,7 @@ use App\Http\Requests\UpdateCategoryRequest;
 use Forone\Admin\Controllers\BaseController;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use Illuminate\Support\Facades\DB;
 
 class CategoryController extends BaseController
 {
@@ -47,6 +48,9 @@ class CategoryController extends BaseController
         $paginate = Category::paginate();
         $results['items'] = $paginate;
         return $this->view(self::URI.'.index',compact('results'));
+
+
+
     }
 
     /**

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Artical;
 
 use App\Artical;
+use App\Category;
+use App\Tag;
 use App\Http\Requests\CreateArticalRequest;
 use App\Http\Requests\UpdateArticalRequest;
 use Forone\Admin\Controllers\BaseController;
@@ -55,7 +57,7 @@ class ArticalController extends BaseController
      */
     public function create()
     {
-        return $this->view(self::URI.'.create');
+        return $this->view(self::URI.'.create',$this->getdata());
     }
 
     /**
@@ -126,5 +128,31 @@ class ArticalController extends BaseController
     public function destroy($id)
     {
         //
+    }
+
+
+    /**
+     * Get date
+     */
+    public function getdata(){
+        $tag=Tag::all();
+        $tags=[];
+        foreach($tag as $tg){
+            array_push($tags,[
+                'label'=>$tg->name,
+                'value'=>$tg->id
+            ]);
+        }
+
+        $cate=Category::all();
+        $cates=[];
+        foreach($cate as $ce){
+            array_push($cates,[
+                'label'=>$ce->name,
+                'value'=>$ce->id
+            ]);
+        }
+
+        return compact('tags','cates');
     }
 }

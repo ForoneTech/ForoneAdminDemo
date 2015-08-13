@@ -10,6 +10,7 @@
     @else
         {!! Form::open(['url'=>'admin/'.$uri,'class'=>'form-horizontal']) !!}
     @endif
+
     @include($uri.'.form')
     {!! Form::panel_end('保存') !!}
     {!! Form::close() !!}
