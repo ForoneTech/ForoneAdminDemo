@@ -2,7 +2,6 @@
 /node_modules
 Homestead.yaml
 .env
-<<<<<<< HEAD
 # OS
 .DS_Store
 Thumbs.db
@@ -24,5 +23,3 @@ _ide_helper.php
 .env.php
 .env
 =======
-
->>>>>>> 083d21eaf475762b2180a8d5b03cff74b046cfce
