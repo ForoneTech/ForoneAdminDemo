@@ -1,7 +1,12 @@
+# laravel
+/bootstrap/compiled.php
 /vendor
 /node_modules
-Homestead.yaml
-.env
+/storage
+# composer
+composer.phar
+composer.lock
+
 # OS
 .DS_Store
 Thumbs.db
@@ -22,4 +27,3 @@ _ide_helper.php
 .env.*.php
 .env.php
 .env
-=======
