@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6534a41f9c3d100bd082c8ac63405ba2",
+    "hash": "4860c33d042a1c3364f4d62747e22cdb",
     "packages": [
         {
             "name": "artesaos/defender",
@@ -680,7 +680,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ForoneTech/ForoneAdmin.git",
-                "reference": "21d3d7042c4358788cf740c14e99ff6d9f09d9fc"
+                "reference": "b8f5200e5bab79ea89a373726617014d2800c15f"
             },
             "require": {
                 "artesaos/defender": "0.3.1",
@@ -710,7 +710,7 @@
                 "forone",
                 "laravel 5"
             ],
-            "time": "2015-08-11 03:48:20"
+            "time": "2015-08-12 10:31:18"
         },
         {
             "name": "illuminate/html",

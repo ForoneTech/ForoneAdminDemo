@@ -18,8 +18,8 @@ class RolesTableSeeder extends Seeder {
 			array (
 				'id' => 1,
 				'name' => 'superuser',
-				'created_at' => '2015-08-11 05:43:01',
-				'updated_at' => '2015-08-11 05:43:01',
+				'created_at' => '2015-08-11 07:10:05',
+				'updated_at' => '2015-08-11 07:10:05',
 			),
 		));
 	}
